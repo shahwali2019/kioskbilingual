@@ -1,0 +1,54 @@
+<div class="container-fluid p-3">
+  <div>
+    <p><strong>{{ 'Intro' | translate }} </strong></p>
+  </div>
+  <form [formGroup]="fGroup" (ngSubmit)="onSubmit(fm.value)" #fm="ngForm">
+    <div class="row">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-8">
+        <div class="form-group">
+          <div style="text-align:center">
+            <input formControlName="search" type="text" placeholder="Enter YOUR ID PLEASE!" class="form-control" name="search">
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-2"></div>
+    </div>
+    <div class="row">
+      <div class="col-2 col-md-4 col-md-4"></div>
+      <div class="col-8 col-md-4 col-md-4">
+        <button (click)="Popuptensecond()" [disabled]="!fm.valid" class="btn btn-primary btn-block">{{ 'Submit' | translate }}</button>
+      </div>
+      <div class="col-2 col-md-4 col-md-4"></div>
+    </div>
+  </form>
+  <div class="row m-3">
+    <div class="col col-12 mt-1 px-md-1 mt-md-0 col-md-2 col-lg-4"></div>
+    <div class="col col-12 mt-1 px-md-1 mt-md-0 col-md-2 col-lg-1">
+      <button (click)="switchLanguage('en')" class="btn btn-ls btn-outline-primary btn-block">English</button>
+    </div>
+
+    <div class="col col-12 mt-1 px-md-1 mt-md-0 col-md-2 col-lg-1">
+      <button (click)="switchLanguage('ch')" class="btn btn-ls btn-outline-primary btn-block">中文</button>
+    </div>
+    <div class="col col-12 mt-1 px-md-1 mt-md-0 col-md-2 col-lg-1">
+      <button (click)="switchLanguage('thia')" class="btn btn-ls btn-outline-primary btn-block">தமிழ்</button>
+    </div>
+    <div class="col col-12 mt-1 px-md-1 mt-md-0 col-md-2 col-lg-1">
+      <button (click)="switchLanguage('malay')" class="btn btn-ls btn-outline-primary btn-block">Melayu</button>
+    </div>
+   
+    <div class="col col-12 mt-1 px-md-1 mt-md-0 col-md-2 col-lg-4"></div>
+
+  </div>
+  <div *ngIf="lists && isMember">
+    <div class="alert" [class.visible]="isVisible"> <strong>{{lists.patient.patName}} &nbsp; &nbsp; {{lists.patient.sch_Set_ID}} &nbsp; &nbsp; {{lists.patient.locationName}} &nbsp; &nbsp; </strong> </div>
+    <span (click)="queueBill(lists)" style="float:right; cursor: pointer;" class="badge badge-pill badge-primary p-2 mt-2"></span>
+  </div>
+  <div *ngIf="isNewUser">
+    <span (click)="newUser()" style="cursor: pointer;" class="badge badge-pill badge-danger p-2"></span>
+    <div class="alert" [class.visible]="isVisible"><strong>Patient no appointment, Please register with Admin counter</strong></div>
+  </div>
+</div>
+<button  class="btn btn-ls btn-outline-primary btn-block" (click)="[switchLanguage('regis'), toUser()]">test</button>
+
