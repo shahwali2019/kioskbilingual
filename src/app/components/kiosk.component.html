@@ -1,6 +1,21 @@
+
+<nav class="navbar-dark bg-dark text-center p-3 text-light">
+  <div class="row">
+    <div class="col-4"> </div>
+    <div class="col-4">
+
+      <h4>{{'Name' | translate}}</h4>
+      <h6>{{'Title' | translate}}</h6>
+    </div>
+    <div class="col-4"></div>
+  </div>
+</nav>
+
+
 <div class="container-fluid p-3">
   <div>
     <p><strong>{{ 'Intro' | translate }} </strong></p>
+
   </div>
   <form [formGroup]="fGroup" (ngSubmit)="onSubmit(fm.value)" #fm="ngForm">
     <div class="row">
@@ -25,19 +40,19 @@
   <div class="row m-3">
     <div class="col col-12 mt-1 px-md-1 mt-md-0 col-md-2 col-lg-4"></div>
     <div class="col col-12 mt-1 px-md-1 mt-md-0 col-md-2 col-lg-1">
-      <button (click)="switchLanguage('en')" class="btn btn-ls btn-outline-primary btn-block">English</button>
+      <button (click)="switchLanguage('en')" class="btn btn-ls btn-outline-primary ">English</button>
     </div>
 
     <div class="col col-12 mt-1 px-md-1 mt-md-0 col-md-2 col-lg-1">
-      <button (click)="switchLanguage('ch')" class="btn btn-ls btn-outline-primary btn-block">中文</button>
+      <button (click)="switchLanguage('ch')" class="btn btn-ls btn-outline-primary">中文</button>
     </div>
     <div class="col col-12 mt-1 px-md-1 mt-md-0 col-md-2 col-lg-1">
-      <button (click)="switchLanguage('thia')" class="btn btn-ls btn-outline-primary btn-block">தமிழ்</button>
+      <button (click)="switchLanguage('thia')" class="btn btn-ls btn-outline-primary ">தமிழ்</button>
     </div>
     <div class="col col-12 mt-1 px-md-1 mt-md-0 col-md-2 col-lg-1">
-      <button (click)="switchLanguage('malay')" class="btn btn-ls btn-outline-primary btn-block">Melayu</button>
+      <button (click)="switchLanguage('malay')" class="btn btn-ls btn-outline-primary">Melayu</button>
     </div>
-   
+
     <div class="col col-12 mt-1 px-md-1 mt-md-0 col-md-2 col-lg-4"></div>
 
   </div>
@@ -50,5 +65,10 @@
     <div class="alert" [class.visible]="isVisible"><strong>Patient no appointment, Please register with Admin counter</strong></div>
   </div>
 </div>
-<button  class="btn btn-ls btn-outline-primary btn-block" (click)="[switchLanguage('regis'), toUser()]">test</button>
+<button class="btn btn-ls btn-outline-primary btn-block" (click)="[switchLanguage('regis'), toUser()]">test</button>
 
+<footer class="page-footer font-small indigo bg-dark text-light">
+  <div class="footer-copyright text-center py-3">
+    <strong>{{"Footer" | translate }}</strong>
+  </div>
+</footer>

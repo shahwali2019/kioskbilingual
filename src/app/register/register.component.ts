@@ -14,9 +14,14 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit() {
   }
-
-  toPM() {
-    this.router.navigate(['']);
+  queueBill(data) {
+    this.router.navigate(['kiosk', data.id]);
   }
+  toPM() {
+    this.router.navigate(['kiosk']);
+  }
+
+
+
 
 }

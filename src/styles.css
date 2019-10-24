@@ -1,4 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
+/* kiosk */
 html body {
   width: 100%;
   min-height: 100%;
@@ -71,3 +71,92 @@ p {
 .table {
   background-color: white;
 }
+
+
+
+
+/* main menu */
+
+.navbar button.active {
+  background-color: white;
+  color: black;
+  padding: 27px -209px;
+  margin: 1px -1000px;
+}
+
+.btn {
+  padding: 14px 44px;
+  font-weight: 100;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+nav button {
+  background-color: gray;
+  border: none;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 4px;
+  margin: 1px 1px;
+  cursor: pointer;
+  padding: 20px 34px;
+}
+
+
+
+span {
+  border-radius: 100%;
+  font-size: 36px;
+}
+
+.fa {
+  font-size: 38px;
+}
+
+
+.btn button {
+  
+  color: black;
+  background-color: white;
+  font-size: 10px;
+  padding: 8px 14px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.navbar {
+  width: 99.8%;
+  background-color: grey;
+  overflow: auto;
+  border-color: grey;
+}
+
+.nav {
+  width: 100%;
+  background-color: grey;
+  overflow: auto;
+}
+
+.content {
+  margin: 1px auto;
+  margin-bottom: -20px;
+  font-family: 'Merriweather', serif;
+  font-size: 12px;
+  color: #6c767a;
+  line-height: 1.9;
+  color: white;
+}
+
+
+
+
+
+
+
+
+

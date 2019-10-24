@@ -6,6 +6,8 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { AppComponent } from './app.component';
 import { KioskComponent } from './components/kiosk.component';
 import { RegisterComponent } from './register/register.component';
+import { HelpmenuComponent } from './helpmenu/helpmenu.component';
+import { HomeComponent } from './home/home.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
@@ -24,7 +26,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     KioskComponent,
     HeaderComponent,
     FooterComponent,
-    RegisterComponent
+    RegisterComponent,
+    HelpmenuComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

@@ -1,11 +1,24 @@
 import { KioskComponent } from './components/kiosk.component';
 import { RegisterComponent } from './register/register.component';
+import { HelpmenuComponent } from './helpmenu/helpmenu.component';
+import { HomeComponent } from './home/home.component';
+
 import {Routes }from '@angular/router';
+
+
 
 export const appRoute:Routes = [
 {
-  path: '',
-  component:KioskComponent
+    path: '',
+    component: HomeComponent
+  },
+  {
+    path: 'home',
+    component: HelpmenuComponent
+  },
+  {
+    path: 'h',
+    component: HomeComponent
   },
   {
 
@@ -16,4 +29,7 @@ export const appRoute:Routes = [
   path: 'user',
   component: RegisterComponent
 
-}];
+  }];
+
+
+
